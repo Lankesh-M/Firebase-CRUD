@@ -68,7 +68,7 @@ class UserData extends StatelessWidget {
             children: [
               //for Name
               const Text(
-                "Full Name",
+                "Full ",
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
               ),
               const SizedBox(
