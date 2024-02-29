@@ -27,7 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return const Scaffold(
       body: Center(
         child: Text(
-          "Welcome to Firebase",
+          "Welcome to MyApp",
           style: TextStyle(
               color: Colors.black, fontWeight: FontWeight.bold, fontSize: 30),
         ),

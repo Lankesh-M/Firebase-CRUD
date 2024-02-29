@@ -80,7 +80,7 @@ class _HomePageState extends State<Home> {
                           openNoteBox(docId: docId);
                         },
                         icon: const Icon(
-                          Icons.settings,
+                          Icons.drive_file_rename_outline_outlined,
                           color: Colors.blueGrey,
                         ),
                       ),

@@ -1,7 +1,6 @@
 import 'package:crud/features/user_auth/presentation/pages/login_page.dart';
 import 'package:crud/firebase_options.dart';
 import 'package:crud/pages/home.dart';
-import 'firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:crud/features/app/splash_screen/splash_screen.dart';
@@ -27,7 +26,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Mental-Health',
       debugShowMaterialGrid: false,
-      home: SplashScreen(child: LoginPage()),
+      home: const SplashScreen(child: LoginPage()),
     );
   }
 }
