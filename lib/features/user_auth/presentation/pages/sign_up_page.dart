@@ -5,7 +5,6 @@ import 'package:crud/features/user_auth/presentation/pages/login_page.dart';
 import 'package:crud/features/user_auth/presentation/pages/user_data.dart';
 import 'package:crud/features/user_auth/presentation/widget/form_container_widget.dart';
 import 'package:crud/global/common/toast.dart';
-import 'package:crud/pages/home.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -135,17 +134,10 @@ class _SignupPageState extends State<SignupPage> {
 
     if (user != null) {
       showToast(message: "User is successfully created");
-      Navigator.pushNamed(context, '/home');
       Navigator.pushAndRemoveUntil(
           context,
           MaterialPageRoute(builder: (context) => const UserData()),
           (route) => false);
-      // Navigator.push(
-      //   context,
-      //   MaterialPageRoute(
-      //     builder: (context) => const UserData(),
-      //   ),
-      // );
     } else {
       showToast(message: "Error happend while signup");
     }

@@ -1,4 +1,3 @@
-import 'package:crud/features/app/screens/home.dart';
 import 'package:crud/features/user_auth/firebase_auth_implementation/firebase_auth_servise.dart';
 import 'package:crud/features/user_auth/presentation/pages/sign_up_page.dart';
 import 'package:crud/features/user_auth/presentation/widget/form_container_widget.dart';
@@ -23,8 +22,8 @@ class _LoginPageState extends State<LoginPage> {
       FirebaseAuthService(); //Creating an instance to use its properties
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
 
-  TextEditingController _emailController = TextEditingController();
-  TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
 
   @override
   void dispose() {
@@ -179,7 +178,7 @@ class _LoginPageState extends State<LoginPage> {
       // Navigator.pushNamed(context, '/home');
       Navigator.pushAndRemoveUntil(
           context,
-          MaterialPageRoute(builder: (context) => HomePage()),
+          MaterialPageRoute(builder: (context) => const Home()),
           (route) => false);
     } else {
       showToast(message: "Error happend while signin");
@@ -203,7 +202,7 @@ class _LoginPageState extends State<LoginPage> {
         );
 
         await _firebaseAuth.signInWithCredential(credential);
-        // Navigator.pushNamed(context, "/home");
+        Navigator.pushNamed(context, "/home");
       }
     } catch (e) {
       showToast(message: " $e");
